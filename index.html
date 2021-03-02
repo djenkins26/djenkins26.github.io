@@ -1,14 +1,169 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Danyelle's Portfolio</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
       <link href="assets/styles/main.css" rel="stylesheet">
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="assets/scripts/index.js" type="text/javascript" charset="utf-8" defer></script>
+
     </head>
-    <body>
-      <h1> Portfolio Template </h1>
-    </body>
-</html>
+
+<body>
+  <nav id="navbar">
+    <div class="topnav">
+      <a class="active" href="#about">About</a>
+      <a href="#languages">Languages</a>
+      <a href="#porfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+
+  <header class="landingpage">
+    <h1>Danyelle Jenkins</h1>
+
+      <p>Junior Front-End Software Engineer based in Los Angeles.
+      </p>
+        <hr class="divider black my-4" />
+        <div class="columns download">
+          <p>
+             <a href="Resume/resume (1).pdf" class="button" download><i class="fa fa-download"></i>Check out my Resume!</a>
+          </p>
+       </div>
+  </header>
+
+  <section class="page-section pg-primary" id="about">
+    <h1>About Me :)</h1>
+    <img src="images/me.jpg" width="150" height="150" alt="me" class="center">
+    <hr class="divider black my-4" />
+    <p>My name is Danyelle Jenkins and I am a Junior Software Engineer with an
+      emphasis on Front-End development. My passion is creating websites for
+      beauty and clothing brands to help sell their products. I have built single
+      page applications using HTML/CSS, JavaScript, React, and Python while
+      communicating with REST APIs. Please click the button below to view my work!
+    </p>
+    <button class="button button2" href="#services">Get Started!</button>
+  </section>
+
+  <section class="page-section pg2-primary" id="languages">
+    <h1>Languages</h1>
+    <hr class="divider black my-4" />
+      <h3>HTML/CSS</h3>
+      <h3>JavaScript</h3>
+      <h3>React</h3>
+      <h3>Python</h3>
+  </section>
+
+
+
+<section class="page-section pg3-primary" id="porfolio">
+<h2 class="text-center mt-0">Portfolio</h2>
+<hr class="divider black my-4" />
+<div class="row">
+  <div class="column">
+    <img src="images/travelblog.png" alt="A react application for users to create a travel blog" onclick="myFunction(this);">
+    <a class="text-muted mb-5" href=" https://djenkins26.github.io/travel-blog-client/">Travel Blog</a>
+  </div>
+
+
+  <div class="column">
+    <img src="images/teahouse.png" alt="Used React to build an online space to spill the tea" onclick="myFunction(this);">
+    <a class="text-muted mb-5" href="https://ga-sei-team-418.github.io/teahouse-client/">Teahouse</a>
+  </div>
+
+
+  <div class="column">
+    <img src="images/productsapp.png" alt="A single page application where users can input products and short reviews" onclick="myFunction(this);">
+    <a class="text-muted mb-5" href="https://djenkins26.github.io/products-app-project2-client-/">Products App</a>
+  </div>
+
+
+  <div class="column">
+    <img src="images/tictactoe.png" alt="An interactive Tic-Tac-Toe board game using Javascript" onclick="myFunction(this);">
+    <a class="text-muted mb-5" href="https://djenkins26.github.io/tic-tac-toe/">Tic Tac Toe</a>
+  </div>
+
+
+  <!-- The expanding image container -->
+<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:50%">
+
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
+</section>
+
+
+<!-- <script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+if (window.pageYOffset >= sticky) {
+  navbar.classList.add("sticky")
+} else {
+  navbar.classList.remove("sticky");
+}
+}
+</script> -->
+
+<script>
+function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+
+
+<section class="page-section pg4-primary" id="contact">
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Contact Me!</h2>
+                        <!-- <hr class="divider my-4" /> -->
+                        <a class="text-muted mb-5" href="www.linkedin.com/in/danyelle-jenkins">Linkedin: www.linkedin.com/in/danyelle-jenkins</a>
+                        <hr class="divider my-4" />
+                        <a class="text-muted mb-5" href="https://github.com/djenkins26">Github: https://github.com/djenkins26</a>
+                        <hr class="divider my-4" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                        <div>(323) 839-7911</div>
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                        <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                        <a class="d-block" href="djenkins0628@gmail.com">djenkins0628@gmail.com</a>
+                    </div>
+                </div>
+
+  </section>
+
+
+
+</body>
